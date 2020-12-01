@@ -3,7 +3,7 @@ import './App.css';
 
 function App() {
   const [vpnList, setVpnList] = useState([])
-  const [selectedVpn, setSelectedVpn] = useState('')
+  const [selectedVpn, setSelectedVpn] = useState()
   const [routerLocation, setRouterLocation] = useState('fool')
 
   const api = `http://${routerLocation}:8000`
@@ -52,7 +52,7 @@ function App() {
       </div>
       <div className="wrapper">
         <div className="maxWidth">
-          <select value={selectedVpn} defaultValue="Il faut selectionner quelque chose" onChange={e => setSelectedVpn(e.target.value)}>
+          <select value={selectedVpn || undefined} onChange={e => setSelectedVpn(e.target.value)}>
             {vpnList.map(({label, value}, index) => (
                 <option key={`${value}-${index}`} value={value}>{label}</option>
             ))}
