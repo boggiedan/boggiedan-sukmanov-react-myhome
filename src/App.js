@@ -4,7 +4,7 @@ import './App.css';
 function App() {
   const [vpnList, setVpnList] = useState([])
   const [selectedVpn, setSelectedVpn] = useState()
-  const [routerLocation, setRouterLocation] = useState('fool')
+  const [routerLocation, setRouterLocation] = useState(window.location.hostname)
 
   const api = `http://${routerLocation}:8000`
 
