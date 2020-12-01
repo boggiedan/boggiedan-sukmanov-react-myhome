@@ -4,9 +4,9 @@ import './App.css';
 function App() {
   const [vpnList, setVpnList] = useState([])
   const [selectedVpn, setSelectedVpn] = useState(null)
-  const [routerIp, setRouterIp] = useState('fool')
+  const [routerLocation, setRouterLocation] = useState('fool')
 
-  const api = `http://${routerIp}:8000`
+  const api = `http://${routerLocation}:8000`
 
   const fetchVpnList = () => {
     setSelectedVpn(null)
@@ -47,7 +47,7 @@ function App() {
         <p>192.168.1.17</p>
         <label>
           Ou est mon routeur:
-          <input type="text" value={routerIp} onChange={(e) => setRouterIp(e.target.value)}/>
+          <input type="text" value={routerIp} onChange={(e) => setRouterLocation(e.target.value)}/>
         </label>
       </div>
       <div className="wrapper">
