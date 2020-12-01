@@ -45,6 +45,7 @@ function App() {
       <div className="wrapper">
         <p>Usual Ip:</p>
         <p>192.168.1.17</p>
+        <p>Si il y a une erreur à l'initialisation (tu reconnaitras) avec cette configuration: 192.168.1.17. Contacte l'administrateur système (c'est boggie)</p>
         <label>
           Ou est mon routeur:
           <input type="text" value={routerLocation} onChange={(e) => setRouterLocation(e.target.value)}/>
