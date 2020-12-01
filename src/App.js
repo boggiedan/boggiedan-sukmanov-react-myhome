@@ -43,9 +43,8 @@ function App() {
   return (
     <div className="App">
       <div className="wrapper">
-        <p>Usual Ips:</p>
+        <p>Usual Ip:</p>
         <p>192.168.1.17</p>
-        <p>192.168.0.10</p>
         <label>
           Ou est mon routeur:
           <input type="text" value={routerIp} onChange={(e) => setRouterIp(e.target.value)}/>
