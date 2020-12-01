@@ -1,3 +1,14 @@
+# Starting and running on the server
+To run the server in the background on the server (in order to log out)
+* `screen`
+* `npm start`
+* ctrl+a d (to exit the screen mode)
+
+To come back on the process when log in to server
+* `screen -r`
+* `screen 1229` (1229 is an example, `screen -r` will show the different processes)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
