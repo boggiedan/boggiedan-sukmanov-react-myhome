@@ -4,7 +4,7 @@ import './App.css';
 function App() {
   const [vpnList, setVpnList] = useState([])
   const [selectedVpn, setSelectedVpn] = useState(null)
-  const [routerIp, setRouterIp] = useState('192.168.1.17')
+  const [routerIp, setRouterIp] = useState('fool')
 
   const api = `http://${routerIp}:8000`
 
