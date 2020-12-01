@@ -3,7 +3,7 @@ import './App.css';
 
 function App() {
   const [vpnList, setVpnList] = useState([])
-  const [selectedVpn, setSelectedVpn] = useState(null)
+  const [selectedVpn, setSelectedVpn] = useState('')
   const [routerLocation, setRouterLocation] = useState('fool')
 
   const api = `http://${routerLocation}:8000`
@@ -52,10 +52,9 @@ function App() {
       </div>
       <div className="wrapper">
         <div className="maxWidth">
-          <select value={selectedVpn} onChange={e => setSelectedVpn(e.target.value)}>
-            <option disabled selected value> -- il faut selectionner quelque chose -- </option>
-            {vpnList.map(({label, value}) => (
-                <option value={value}>{label}</option>
+          <select value={selectedVpn} defaultValue="Il faut selectionner quelque chose" onChange={e => setSelectedVpn(e.target.value)}>
+            {vpnList.map(({label, value}, index) => (
+                <option key={`${value}-${index}`} value={value}>{label}</option>
             ))}
           </select>
           <button className="button" onClick={fetchVpnList}>Rafraîchir la liste</button>
